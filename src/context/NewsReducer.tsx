@@ -9,6 +9,11 @@ export default  (state : IInitialstate,action:IAction) : IInitialstate =>{
             ...state,
             news:action.payload
         }
+        case GET_SOURCENEWS:
+            return{
+                ...state,
+                sourcenews: action.payload
+            }
         default :
         return state
     }

@@ -2,29 +2,27 @@ import React, { useContext, useEffect } from "react";
 import NewsContext from "../context/NewsContext";
 import NewsListItem from "./NewsListItem";
 
-const AllNews: React.FC = () => {
+const NewsBySource: React.FC = () => {
   const newscontext = useContext(NewsContext);
 
   const { news } = newscontext.State;
 
   return (
     <div className="d-flex flex-column">
-      <p className="p-3">Sources</p>
-      <button className="btn btn-light text-left">All Sources</button>
-      <div className="newslistdiv">
+      {/* <p className="p-3"></p>
+      <div className="">
         <ul>
           {news.map((item) => {
             return (
-              <li key={item.id} className="newslistitem">
-                <NewsListItem name={item.name} id={item.id} />
+              <li key={item.id} className="">
+                <NewsListItem name={item.name} />
               </li>
             );
           })}
         </ul>
-      </div>
-      <button className="btn btn-light text-left">Favorites</button>
+      </div> */}
     </div>
   );
 };
 
-export default AllNews;
+export default NewsBySource;

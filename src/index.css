@@ -8,11 +8,12 @@
     margin: 0;
   }
   
-  body{
-    height: 100vh;
-    width: 100%;
+  /* html {
+    height: 100%;
   }
-  
+  body {
+    min-height: 100%;
+  } */
   main{
     height: 90vh;
     width: 100%;
@@ -30,12 +31,22 @@
     margin-right: 0;
   }
   
-  .row div{
+  
+
+  /* allnews */
+.row div{
     height: 90vh;
   }
 
-  /* allnews */
+  .newslistitem{ 
+    box-shadow: 0 1px 4px 1px rgba(0,0,0,.1);
+  }
 
-  /* .sourcesdiv{
-    
-  } */
+  ul li:hover{
+    background-color: rgb(234, 234, 245);
+    cursor: pointer;
+  }
+
+ .newslistdiv{
+   overflow-y: scroll;
+ }
