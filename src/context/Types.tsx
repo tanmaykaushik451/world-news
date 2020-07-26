@@ -1,0 +1,6 @@
+export const GET_DATA ="GET_DATA"
+export const SET_FAVOURATE ="SET_FAVOURATE"
+export const GET_FAVCOUNT ="GET_FAVCOUNT"
+export const GET_SOURCENEWS ="GET_SOURCENEWS"
+export const GET_SELECTED ="GET_SELECTED"
+export const NEWS_ERROR ="NEWS_ERROR"
