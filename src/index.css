@@ -68,3 +68,11 @@
    width: 70px;
    object-fit: contain;
  }
+
+ input[type="checkbox"]{
+   display: none;
+ }
+
+ .mystar{
+   display: contents;
+ }

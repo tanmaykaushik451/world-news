@@ -5,5 +5,5 @@ export const InitialState : IInitialstate={
     favourates : [],
     sourcenews :[],
     favcount:0,
-    view:{}
+    view: []
 }
