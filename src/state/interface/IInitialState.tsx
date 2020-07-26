@@ -3,5 +3,5 @@ export interface IInitialstate{
     favourates : any[],
     sourcenews :any[],
     favcount:Number,
-    view:any{}
+    view:{}
 }

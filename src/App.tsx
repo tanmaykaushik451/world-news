@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import './App.css';
 import Navigation from './layouts/Navigation';
 import Home from './pages/Home';
+import NewsState from "./context/NewsState"
 
 function App() {
   return (
+    <NewsState>
     <Router>
       <Navigation />
       <main>
@@ -14,6 +15,7 @@ function App() {
         </Switch>
       </main>
     </Router>
+    </NewsState>
   );
 }
 
