@@ -14,6 +14,11 @@ export default  (state : IInitialstate,action:IAction) : IInitialstate =>{
                 ...state,
                 sourcenews: action.payload
             }
+        case GET_SELECTED:
+            return{
+                ...state,
+                view:state.sourcenews.filter((item)=>item.title === action.payload)
+            }
         default :
         return state
     }

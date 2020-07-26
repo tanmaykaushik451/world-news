@@ -44,12 +44,18 @@ const ShipmentState = (props: any) => {
     }
   };
 
+  const showselected =(id:string)=>{
+    dispatch({type:GET_SELECTED,payload:id})
+  }
+
+
   return (
     <NewsContext.Provider
       value={{
         State: state,
         getnewsdata,
         getsourcenews,
+        showselected
       }}
     >
       {props.children}

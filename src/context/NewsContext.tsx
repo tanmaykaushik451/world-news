@@ -6,6 +6,7 @@ const ContextState : INewsContext={
     State : InitialState,
     getnewsdata: ()=>{throw new Error("News not available")},
     getsourcenews: ()=>{throw new Error("News not available")},
+    showselected: ()=>{throw new Error("News not available")},
 }
 
 const NewsContext = createContext<INewsContext>(ContextState)

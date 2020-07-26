@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from "react"
 import NewsContext from "../context/NewsContext";
 import AllNews from "../components/AllNews";
+import NewsBySource from "../components/NewsBySource";
 
 const Home : React.FC =()=>{
 
@@ -16,8 +17,8 @@ const Home : React.FC =()=>{
 return(
     <div className="row" id="content">
       <div className="col-12 col-md-2 p-0"><AllNews/></div>
-      <div className="col-12 col-md-4 bg-dark p-0">hi</div>
-      <div className="col-12 col-md-6 p-0">hi</div>
+      <div className="col-12 col-md-4 p-0"><NewsBySource/></div>
+      <div className="col-12 col-md-6 p-0"></div>
     </div>
 )
 }

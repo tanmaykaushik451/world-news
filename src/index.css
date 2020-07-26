@@ -50,3 +50,21 @@
  .newslistdiv{
    overflow-y: scroll;
  }
+
+ .newsbysourcediv{
+   overflow-y: scroll;
+ }
+
+ /* newsthumbnai */
+
+ .newsthumbnail{
+   max-height: 50px;
+   font-size: 12px;
+   padding: 2px;
+ }
+
+ .newsthumbnail img{
+   height: 50px;
+   width: 70px;
+   object-fit: contain;
+ }
