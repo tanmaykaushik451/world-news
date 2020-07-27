@@ -15,13 +15,9 @@ const NewsBySource: React.FC = () => {
         <ul>
           {sourcenews.map((item) => {
             return (
-              <li className={item.source.name}>
+              <li>
                 <NewsThumbNail
-                  publishedAt={item.publishedAt}
-                  name={item.source.name}
-                  id={item.source.id}
-                  img={item.urlToImage}
-                  title={item.title}
+                  item={item}
                 />
               </li>
             );

@@ -1,20 +1,17 @@
 import React, { useState, useContext } from "react";
 import { FaStar } from "react-icons/fa";
 import NewsContext from "../context/NewsContext";
+import { IStarIcon } from "./StarIcon";
 
-export interface IStarIcon {
-  item: any;
-}
-
-const StarIcon: React.FC<IStarIcon> = ({ item }) => {
-  const [checked, setChecked] = useState(false);
+const StarIconY: React.FC<IStarIcon> = ({ item }) => {
+  const [checked, setChecked] = useState(true);
 
   const newscontext = useContext(NewsContext);
 
-  const { setfavourite } = newscontext;
+  const { removefavourite } = newscontext;
 
   const handleOncheck = () => {
-    setfavourite(item);
+    removefavourite(item);
   };
 
   return (
@@ -26,10 +23,10 @@ const StarIcon: React.FC<IStarIcon> = ({ item }) => {
           checked={checked}
           onChange={handleOncheck}
         />
-        <FaStar className="star" color="grey" />
+        <FaStar className="star" color="yellow" />
       </label>
     </div>
   );
 };
 
-export default StarIcon;
+export default StarIconY;

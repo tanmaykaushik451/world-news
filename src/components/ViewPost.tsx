@@ -11,7 +11,6 @@ const ViewPost: React.FC = () => {
     <>
       <div className="card">
         <img className="card-img-top" src={view[0].urlToImage} alt="N/A" />
-        <StarIcon/>
         <div className="card-body">
           <h5 className="card-title">
             {view[0].title} 

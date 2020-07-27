@@ -9,6 +9,7 @@ import {
   GET_SOURCENEWS,
   SET_FAVOURATE,
   NEWS_ERROR,
+  REMOVE_FAVOURITE,
 } from "./Types";
 import { IAction } from "../context/interfaces/IAction";
 import NewsContext from "./NewsContext";
@@ -48,6 +49,17 @@ const ShipmentState = (props: any) => {
     dispatch({type:GET_SELECTED,payload:id})
   }
 
+  const setfavourite = ( item : any) =>{
+    dispatch({type:SET_FAVOURATE,payload:item})
+  }
+  const removefavourite = ( item : any) =>{
+    dispatch({type:REMOVE_FAVOURITE,payload:item})
+  }
+  const getfavcount = () =>{
+    dispatch({type:GET_FAVCOUNT})
+  }
+  
+
 
   return (
     <NewsContext.Provider
@@ -55,7 +67,10 @@ const ShipmentState = (props: any) => {
         State: state,
         getnewsdata,
         getsourcenews,
-        showselected
+        showselected,
+        setfavourite,
+        getfavcount,
+        removefavourite
       }}
     >
       {props.children}

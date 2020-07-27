@@ -5,7 +5,12 @@ import NewsListItem from "./NewsListItem";
 const AllNews: React.FC = () => {
   const newscontext = useContext(NewsContext);
 
-  const { news } = newscontext.State;
+  const { news,favcount,favourates} = newscontext.State;
+  const { getfavcount} = newscontext
+
+  useEffect(()=>{
+    getfavcount()
+  },[favourates])
 
   return (
     <div className="d-flex flex-column">
@@ -22,7 +27,7 @@ const AllNews: React.FC = () => {
           })}
         </ul>
       </div>
-      <button className="btn btn-light text-left">Favorites</button>
+        <button className="btn btn-light text-left">Favorites {favcount}</button>
     </div>
   );
 };

@@ -5,4 +5,7 @@ export interface INewsContext {
     getnewsdata :()=>void,
     getsourcenews :(id:string)=>void,
     showselected :(id:string)=>void,
+    setfavourite :(item:string)=>void,
+    removefavourite :(item:string)=>void,
+    getfavcount :()=>void,
 }
