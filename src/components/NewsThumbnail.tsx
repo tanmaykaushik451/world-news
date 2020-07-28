@@ -32,7 +32,7 @@ const NewsThumbNail: React.FC<INewsThumbNail> = ({ item }) => {
         <span>{item.title}</span>
         <span>{item.publishedAt}</span>
       </div>
-      <div>{!isfav ? <StarIcon item={item} /> : <StarIconY item={item} />}</div>
+      <div className="stardiv">{!isfav ? <StarIcon item={item} /> : <StarIconY item={item} />}</div>
     </div>
   );
 };
