@@ -9,7 +9,7 @@ const NewsBySource: React.FC = () => {
 
   return (
     <div className="newsbysourcediv">
-      {showfav ? (
+      {showfav && favourates.length !== 0 ? (
         <ul>
           {favourates.map((item) => {
             return (
