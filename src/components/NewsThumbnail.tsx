@@ -28,7 +28,7 @@ const NewsThumbNail: React.FC<INewsThumbNail> = ({ item }) => {
   return (
     <div className="newsthumbnail">
       <img src={item.urlToImage} alt="N/A" onClick={showpost} />
-      <div className="thumbnailinfo">
+      <div className="thumbnailinfo" onClick={showpost}>
         <span>{item.title}</span>
         <span>{item.publishedAt}</span>
       </div>
