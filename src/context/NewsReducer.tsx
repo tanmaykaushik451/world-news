@@ -12,7 +12,9 @@ export default  (state : IInitialstate,action:IAction) : IInitialstate =>{
         case GET_SOURCENEWS:
             return{
                 ...state,
-                sourcenews: action.payload
+                sourcenews: action.payload,
+                showfav:false
+                
             }
         case GET_SELECTED:
             return{
