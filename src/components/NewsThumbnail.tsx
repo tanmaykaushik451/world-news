@@ -26,13 +26,13 @@ const NewsThumbNail: React.FC<INewsThumbNail> = ({ item }) => {
   const isfav = favourates.includes(item)
 
   return (
-    <div className="d-flex newsthumbnail my-2">
+    <div className="newsthumbnail">
       <img src={item.urlToImage} alt="N/A" onClick={showpost} />
-      <div className="d-flex">
+      <div className="thumbnailinfo">
         <span>{item.title}</span>
         <span>{item.publishedAt}</span>
-        <p>{!isfav ? <StarIcon item={item} /> : <StarIconY item={item} />}</p>
       </div>
+      <div>{!isfav ? <StarIcon item={item} /> : <StarIconY item={item} />}</div>
     </div>
   );
 };

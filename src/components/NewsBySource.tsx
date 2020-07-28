@@ -9,8 +9,6 @@ const NewsBySource: React.FC = () => {
   const { sourcenews } = newscontext.State;
 
   return (
-    <div className="d-flex flex-column">
-      <p className="p-3">{}</p>
       <div className="newsbysourcediv">
         <ul>
           {sourcenews.map((item) => {
@@ -24,7 +22,6 @@ const NewsBySource: React.FC = () => {
           })}
         </ul>
       </div>
-    </div>
   );
 };
 

@@ -1,8 +1,11 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import NewsContext from "../context/NewsContext";
 import NewsListItem from "./NewsListItem";
 
 const AllNews: React.FC = () => {
+
+  const [showfav,setshowfav] = useState(false)
+
   const newscontext = useContext(NewsContext);
 
   const { news,favcount,favourates} = newscontext.State;
@@ -27,7 +30,7 @@ const AllNews: React.FC = () => {
           })}
         </ul>
       </div>
-        <button className="btn btn-light text-left">Favorites {favcount}</button>
+        <button className="btn btn-light text-left" onClick={()=>setshowfav(!showfav)}>Favorites {favcount}</button>
     </div>
   );
 };
