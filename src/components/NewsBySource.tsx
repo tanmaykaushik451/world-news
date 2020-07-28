@@ -6,22 +6,32 @@ import NewsThumbNail from "./NewsThumbnail";
 const NewsBySource: React.FC = () => {
   const newscontext = useContext(NewsContext);
 
-  const { sourcenews } = newscontext.State;
+  const { sourcenews, favourates, showfav } = newscontext.State;
 
   return (
-      <div className="newsbysourcediv">
+    <div className="newsbysourcediv">
+      {showfav ? (
         <ul>
-          {sourcenews.map((item) => {
+          {favourates.map((item) => {
             return (
               <li>
-                <NewsThumbNail
-                  item={item}
-                />
+                <NewsThumbNail item={item} />
               </li>
             );
           })}
         </ul>
-      </div>
+      ) : (
+        <ul>
+          {sourcenews.map((item) => {
+            return (
+              <li>
+                <NewsThumbNail item={item} />
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
   );
 };
 

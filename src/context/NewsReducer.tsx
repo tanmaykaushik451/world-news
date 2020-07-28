@@ -1,5 +1,5 @@
 import { IInitialstate } from "../state/interface/IInitialState";
-import { GET_DATA,GET_FAVCOUNT,GET_SELECTED,GET_SOURCENEWS,SET_FAVOURATE,NEWS_ERROR, REMOVE_FAVOURITE} from "./Types"
+import { GET_DATA,GET_FAVCOUNT,GET_SELECTED,GET_SOURCENEWS,SET_FAVOURATE,NEWS_ERROR, REMOVE_FAVOURITE, IS_SHOWFAV} from "./Types"
 import { IAction } from "./interfaces/IAction";
 
 export default  (state : IInitialstate,action:IAction) : IInitialstate =>{
@@ -34,6 +34,11 @@ export default  (state : IInitialstate,action:IAction) : IInitialstate =>{
                 ...state,
                 favcount:state.favourates.length
                 }
+        case IS_SHOWFAV:
+            return{
+                ...state,
+                showfav:action.payload
+            }
         default :
         return state
     }

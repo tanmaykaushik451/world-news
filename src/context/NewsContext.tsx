@@ -10,6 +10,7 @@ const ContextState : INewsContext={
     setfavourite: ()=>{throw new Error("News not available")},
     getfavcount: ()=>{throw new Error("News not available")},
     removefavourite: ()=>{throw new Error("News not available")},
+    isshowfavourites: ()=>{throw new Error("News not available")},
 }
 
 const NewsContext = createContext<INewsContext>(ContextState)

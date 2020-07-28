@@ -9,7 +9,7 @@ import {
   GET_SOURCENEWS,
   SET_FAVOURATE,
   NEWS_ERROR,
-  REMOVE_FAVOURITE,
+  REMOVE_FAVOURITE,IS_SHOWFAV
 } from "./Types";
 import { IAction } from "../context/interfaces/IAction";
 import NewsContext from "./NewsContext";
@@ -58,6 +58,9 @@ const ShipmentState = (props: any) => {
   const getfavcount = () =>{
     dispatch({type:GET_FAVCOUNT})
   }
+  const isshowfavourites = (favshow : boolean) =>{
+    dispatch({type:IS_SHOWFAV,payload:favshow})
+  }
   
 
 
@@ -70,7 +73,8 @@ const ShipmentState = (props: any) => {
         showselected,
         setfavourite,
         getfavcount,
-        removefavourite
+        removefavourite,
+        isshowfavourites,
       }}
     >
       {props.children}

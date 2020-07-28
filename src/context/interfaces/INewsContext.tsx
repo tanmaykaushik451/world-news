@@ -8,4 +8,5 @@ export interface INewsContext {
     setfavourite :(item:string)=>void,
     removefavourite :(item:string)=>void,
     getfavcount :()=>void,
+    isshowfavourites :(favshow:boolean)=>void,
 }

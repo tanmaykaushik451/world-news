@@ -9,11 +9,16 @@ const AllNews: React.FC = () => {
   const newscontext = useContext(NewsContext);
 
   const { news,favcount,favourates} = newscontext.State;
-  const { getfavcount} = newscontext
+  const { getfavcount,isshowfavourites} = newscontext
 
   useEffect(()=>{
     getfavcount()
   },[favourates])
+
+  const handleshowfav=()=>{
+    setshowfav(!showfav)
+    isshowfavourites(showfav)
+  }
 
   return (
     <div className="d-flex flex-column">
@@ -30,7 +35,7 @@ const AllNews: React.FC = () => {
           })}
         </ul>
       </div>
-        <button className="btn btn-light text-left" onClick={()=>setshowfav(!showfav)}>Favorites {favcount}</button>
+        <button className="btn btn-light text-left" onClick={handleshowfav}>Favorites {favcount}</button>
     </div>
   );
 };
