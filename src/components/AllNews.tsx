@@ -25,7 +25,9 @@ const AllNews: React.FC = () => {
       <p className="p-3">Sources</p>
       <button className="btn btn-light text-left">All Sources</button>
       <div className="newslistdiv">
-        <ul>
+        {news.length===0 ?<div>
+          Please check your internet connection
+        </div> :<ul>
           {news.map((item) => {
             return (
               <li key={item.id} className="newslistitem">
@@ -33,7 +35,7 @@ const AllNews: React.FC = () => {
               </li>
             );
           })}
-        </ul>
+        </ul>}
       </div>
         <button className="btn btn-light text-left" onClick={handleshowfav}>Favorites {favcount}</button>
     </div>
